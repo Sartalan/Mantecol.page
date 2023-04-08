@@ -66,7 +66,7 @@
             <li class="liText">
                 
                     
-                    <a href="extras.html">
+                    <a href="#">
                         <img src="svg/bug.svg" alt="Icono Bookmark">
                         Extras
                     </a>
@@ -79,5 +79,70 @@
     
     <hr>
     <script src="main.js"></script>
+
+    <main>
+        <h2>PUTO</h2>
+
+
+        <div class="LOL">
+            <img src="img/randomlol.jpg" alt="TROLEADO PUTOOOOO">
+        </div>
+        
+    </main>
+
+    <style>
+
+
+
+    h2 {
+        
+        text-align: center;
+        font-size: 2.5em;
+        color:black ;
+        animation-name: puto;
+        animation-duration:4s ;
+       
+    }
+
+    @keyframes puto 
+        {
+            0%{color:black;}
+            10%{color: white;}
+            25%{color:black;}
+            40%{color: white;}
+            60%{color:black;}
+            80%{color: white;}
+            100%{color: white;}
+
+
+        }
+
+           
+
+
+
+
+    .LOL {
+        display: flex;
+        
+        justify-content: space-around;
+        transition: 0.3s;
+    }
+        .LOL img {
+            width: 60%;
+            border: solid black 0.5rem;
+        }
+
+        .LOL img:hover {
+            transform: rotate(180deg);
+        }
+
+
+        @media screen and (max-width:800px){
+            .LOL img:hover {
+                transform: none;
+            }
+        }
+    </style>
 </body>
 </html>

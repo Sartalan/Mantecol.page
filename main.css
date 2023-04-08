@@ -11,170 +11,255 @@ body {                                      /*Fondo Rosado*/
 }
 
 body {                                       /*Body General*/
-    background-color:#000000;
-                             /*Estructura General*/
-    margin:0;
+    background-color:#000000;                                width: 90%;     
+    margin:auto;                               /*Estructura General*/
     font-family: sans-serif;
 }
-
+.botonAbrir, li a img, .botonAbrir, .botonCerrar, .lol {
+    opacity: 0;
+    visibility: hidden;
+}
 .liText, a {
     list-style: none;
     text-decoration: none;
     color: white;
     font-size: 1.26em; 
-    
-                                             /*Eliminación de Estilos Predeterminados */
+    padding: 0.3em;
+
+}
+li a img {
+    display: none;
+}
+
+ header {
+    margin-top: 0.4em;
+    display: flex;
+    justify-content: space-between;
+    background: grey , ;
+    border-radius: 1rem;
+    background-color: rgba(20, 19, 19, 0.044);
 }
 
 .iconNavLeft {
-    width: 8em;
-    padding:0.3em;
+    width: 5em;
+    transition: all 0.2s;
 }
-
-nav {                                            /*Estructuración del Nav Responsive*/
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;                                           
-    margin: 0;
-    background-color: #000000;
-    
-}
-
-header {
-    background-color:rgba(61, 46, 62, 0.256);
-   
-    
-}
-    
-.textBox {
-    display: flex;
-}
-
-.liContentBox {
-    
-    margin-top:0.6em;
-    margin-bottom: 0.6em;
-}
-nav a { 
-   display: block;
-   padding: 0.7em;
-   display: flex;
-}
-
-nav ul {
-    flex-direction: column;
-    
-}
-                                                    /*Fin de la estructuración del Nav Responsive*/
-nav img {
-    margin-right: 0.2em;
-    border: solid 0.08em white;
-    border-radius: 1em;
-    width: 1em;                                          /*Ajuste de Icono*/
-    justify-content: center;
-    align-items: center;
-
+.iconNavLeft:hover {
+    transform: scale(1.15);
 }
 
 nav {
-    border-radius: 0.5em;
-}
-
-nav img, nav a {
-    transition: all 0.1s;
-}
-
-nav a:hover  {
-    transform: scale(1.1);
-    color:cornflowerblue;
-    border-color: cornflowerblue;                     /*Animación Hover para el Touch*/
-}
-
-nav img:hover {
-    transform: scale(1.1);
-    color:rgba(100, 148, 237, 0.767);
-    border-color: rgba(100, 148, 237, 0.716);    
-}
-
-nav ul li {
-    border: solid 1px rgba(203, 195, 195, 0.25);
-    border-radius: 0.5em;                                    /*Ajuste Decorativo*/
-}
-
-nav ul li {
-    transition: 0.2s;
-}
-
-nav ul li:hover {
-    background-color: #000000;
-    transform: scale(1)    
-    translateX(-1em)                                    /*Animación Final Touch*/
-}
-
-header {
     display: flex;
-    border-radius:1em;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-
+    height: auto;
+    margin: auto;
+    list-style: none;
 }
 
-.botonAbrir{
+nav ul {
     display: flex;
-    text-align: center;
-    align-content: center;
-    margin-right:2.2em;
-    justify-content: end;
 }
 
-.lol {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+nav li {
+    transition: all 0.2s;
+    margin: 0 0.3em 0 0.3em;
 }
 
-.botonCerrar {
-    display: flex;
-    height: 4em;
-    text-align: center;
-    align-items: center;
-}
-
-.botonAbrir, .botonCerrar ,i  {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    font-size: 2em;
-}
-
-header {
-    transition: all 0.4s;
-}
-
-.nav {
-
-    transition: transform .4s ease-in-out;
-}
-
- .nav.manzana {
-    transition: all 0.6s;
-    box-shadow: none;
-    transform: translateY(-800px);               /*DIOS NO SE NI QUE HICE*/
-    transition: transform .4s ease-in-out;
-}
-
-
-
-
-@media screen and (min-width:800px){ 
-
-nav, .botonAbrir {
+nav li:hover , nav a:hover {
+    transform: scale(1.3);
    
+    color: cornflowerblue;
+}
+
+nav a:hover {
+    border-bottom: solid 1px cornflowerblue;
+}
+hr {
+    margin-top:0.5em;
+    opacity: .2;
 }
 
 
+
+@media screen and (max-width:800px){ 
+
+    body {
+        width: 100%;
+    }
+    li a img {
+        display: block;
+    }
+
+    .iconNavLeft:hover {
+        transform:none;
+    }
+    
+    hr {
+        display: none;
+    }
+
+    .nav {
+        display: block;
+    }
+
+
+    .liText, a {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        font-size: 1.26em; 
+        
+                                                 /*Eliminación de Estilos Predeterminados */
+    }
+    .botonAbrir, li a img, .botonAbrir, .botonCerrar, .lol {
+        opacity: 1;
+        visibility: visible;
+        text-align: center;
+        justify-content: space-between;
+    }
+    
+    .iconNavLeft {
+        width: 7em;
+        padding:0.3em;
+    }
+    
+    nav {                                            /*Estructuración del Nav Responsive*/
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;                                           
+        margin: 0;
+        background-color: #000000;
+        
+    }
+    
+    header {
+        background-color:rgba(61, 46, 62, 0.256);
+       
+        
+    }
+        
+    .textBox {
+        display: flex;
+    }
+    
+    .liContentBox {
+        
+        margin-top:0.6em;
+        margin-bottom: 0.6em;
+    }
+    nav a { 
+       display: block;
+       padding: 0.7em;
+       margin: 0;
+       display: flex;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        
+    }
+                                                        /*Fin de la estructuración del Nav Responsive*/
+    nav img {
+        margin-right: 0.2em;
+        border: solid 0.08em white;
+        border-radius: 1em;
+        width: 1em;                                          /*Ajuste de Icono*/
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    nav {
+        border-radius: 0.5em;
+    }
+    
+    nav img, nav a {
+        transition: all 0.1s;
+    }
+    
+    nav a:hover  {
+        transform: scale(1.1);
+        font-size: 1.26em;
+         color:cornflowerblue;
+        border-color: cornflowerblue;       
+        border-bottom: none;             /*Animación Hover para el Touch*/
+    }
+    
+    nav img:hover {
+        transform: scale(1.1);
+        color:rgba(100, 148, 237, 0.767);
+        border-color: rgba(100, 148, 237, 0.716);    
+    }
+    
+    nav ul li {
+        border: solid 1px rgba(203, 195, 195, 0.25);
+        border-radius: 0.5em;                                    /*Ajuste Decorativo*/
+    }
+    
+    nav ul li {
+        transition: 0.2s;
+        background-color: #000000;
+    }
+    
+    nav ul li:hover {
+        background-color: #000000;
+        transform: scale(1)    
+        translateX(-1em)                                    /*Animación Final Touch*/
+    }
+    
+    header {
+        display: flex;
+        border-radius:1em;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    
+    }
+    
+    .botonAbrir{
+        display: flex;
+        text-align: center;
+        align-content: center;
+        margin-right:2.2em;
+        justify-content: end;
+    }
+    
+    .lol {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .botonCerrar {
+        display: flex;
+        height: 3.7em;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .botonAbrir, .botonCerrar ,i  {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        font-size: 2em;
+    }
+    
+    header {
+        transition: all ;
+    }
+    
+    .nav {
+    
+        transition: transform .4s ease-in-out;
+    }
+    
+     .nav.manzana {
+        transition: all 0.6s;
+        box-shadow: none;
+        transform: translateY(-800px);               /*DIOS NO SE NI QUE HICE*/
+        transition: transform .4s ease-in-out;
+    }
+      
 } 
